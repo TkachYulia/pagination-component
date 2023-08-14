@@ -30,6 +30,11 @@
       background-color: rgba(0, 0, 0, 0.08);
     }
 
+    .iconButton {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 11px;
+    }
+
     .arrow {
       &::before {
         position: relative;
@@ -59,7 +64,9 @@
         border-right: 0.12em solid rgba(0, 0, 0, 0.43);
         border-top: 0.12em solid rgba(0, 0, 0, 0.43);
       }
-
+      .iconButton {
+        color: rgba(0, 0, 0, 0.43);
+      }
       &:hover {
         background-color: transparent;
         cursor: default;
