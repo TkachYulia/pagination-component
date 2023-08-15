@@ -1,0 +1,51 @@
+@import "./colors.scss";
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    color: $black_400;
+    font-size: 0.9rem;
+
+    .navigationContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 24px;
+            width: 24px;
+            &:not(.dots) {
+                border-radius: 8px;
+                border: 1px solid $main_300;
+                cursor: pointer;
+            }
+            user-select: none;
+            transition: opacity 0.2s;
+            &:not(.dots):hover {
+                background-color: $main_300;
+            }
+            &.selected {
+                cursor: default;
+                background-color: $main_300;
+            }
+            &.disabled,
+            &.loading {
+                opacity: 0.4;
+                &:hover {
+                    background-color: unset;
+                }
+            }
+            &.disabled {
+                cursor: not-allowed;
+            }
+            &.loading {
+                cursor: wait;
+            }
+        }
+    }
+}
